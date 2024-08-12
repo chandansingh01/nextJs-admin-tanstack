@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Pokegenesis
+
+## Overview
+
+NextJS Tanstack starter kit is a Next.js application designed to manage user data efficiently. It leverages modern web technologies, including React, TypeScript, and Tailwind CSS, to provide a responsive and user-friendly interface. The application supports user creation, updating, and deletion, along with a robust data fetching mechanism using React Query.
+
+## Features
+
+- **User Management**: Create, update, and delete user profiles.
+- **Responsive Design**: Built with Tailwind CSS for a mobile-first approach.
+- **Real-time Data Fetching**: Utilizes React Query for efficient data management and synchronization.
+- **Form Validation**: Implements Formik and Yup for robust form handling and validation.
+- **Dark Mode Support**: Automatically adjusts styles based on user preferences.
 
 ## Getting Started
 
-First, run the development server:
+To get started with the project, follow these steps:
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+- Node.js (v14 or later)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/chandansingh01/nextJs-admin-tanstack.git
+   cd nextJs-admin-tanstack
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+### Running the Development Server
+
+To start the development server, run:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your browser and navigate to [http://localhost:3000](http://localhost:3000) to see the application in action.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The project is organized as follows:
 
-## Learn More
+```
+src/
+├── app/                  # Main application directory
+│   ├── components/       # Reusable components
+│   ├── api/              # API routes
+│   ├── hooks/            # Custom hooks
+│   ├── models/           # TypeScript models
+│   ├── pages/            # Page components
+│   ├── styles/           # Global styles
+│   └── utils/            # Utility functions
+├── public/               # Static assets
+├── styles/               # Tailwind CSS configuration
+└── types/                # TypeScript types
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Technologies Used
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Next.js**: A React framework for server-side rendering and static site generation.
+- **TypeScript**: A superset of JavaScript that adds static types.
+- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+- **React Query**: A library for fetching, caching, and updating data in React applications.
+- **Formik**: A library for building forms in React with ease.
+- **Yup**: A JavaScript schema builder for value parsing and validation.
+- **TanStack Table**: A library for building data tables in React with ease.
+- **TanStack Query**: A library for managing data fetching and caching in React applications.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contributions are welcome! If you have suggestions for improvements or new features, please open an issue or submit a pull request.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Make your changes and commit them (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/YourFeature`).
+5. Open a pull request.
+
+
