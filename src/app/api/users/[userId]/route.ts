@@ -3,7 +3,8 @@ import { data } from '../../users'
 import { redirect } from 'next/navigation';
 import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(      
+export async function GET(   
+      req:NextRequest,   
       {
             params,
       }: {
@@ -15,7 +16,7 @@ export async function GET(
       if (!user) {
             redirect('/');
       }
-      return Response.json(user);
+      return NextResponse.json(user);
 }
 
 export async function PATCH(
