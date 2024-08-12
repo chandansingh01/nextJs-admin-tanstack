@@ -8,7 +8,6 @@ declare module "@tanstack/react-table" {
 import { useDeleteUsers, UseUserData } from "@/app/hooks/UseUserData";
 import {
   ColumnFiltersState,
-  flexRender,
   getCoreRowModel,
   getFilteredRowModel,
   getPaginationRowModel,
@@ -28,7 +27,6 @@ import {
 } from "rsuite";
 import UserForm from "../UserForm";
 import { createColumns } from './Columns'; // Import the createColumns function
-import { Filter } from "./Filter";
 import { PaginationControl } from "./Pagination";
 import UserTable from "./UserTable";
 
@@ -51,7 +49,7 @@ export default function UsersPage() {
 
   const handleDelete = () => {
     // Added handleDelete function
-    const users = Object.keys(selectedRowIds).map((item) => parseInt(item));
+    const users = Object.keys(selectedRowIds).map((item) => parseInt(item)+1);
     mutate(users);
   };
 
@@ -116,19 +114,25 @@ export default function UsersPage() {
           header={
             <Stack justifyContent="space-between">
               <h2 className="text-2xl font-bold mb-4 ">Users List</h2>
-              <Button onClick={() => handleOpen(null)}>Add User</Button>
+              <Button  onClick={() => handleOpen(null)}>Add User</Button>
             </Stack>
           }
         >
           <UserTable table={table}/>
-          <Button
+          <div className="flex justify-between">
+            <div>
+          { Object.keys(selectedRowIds)?.length>0&&<Button
+          className="flex items-bottom gap-2 mt-4 justify-start bg-red-500 text-white"
             onClick={() => {
               setConfirmDelete(true);
             }}
           >
             Delete Users
-          </Button>
+          </Button>}
+          </div>
           <PaginationControl table={table} />
+          </div>
+          
         </Panel>
       ) : (
         <Loader center />

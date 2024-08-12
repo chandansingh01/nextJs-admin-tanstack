@@ -11,7 +11,7 @@ function Sidebar() {
         <Home />
       </div>
       <div className="w-12 h-12 flex justify-center items-center cursor-pointer	">
-        <Link href={'/users'}><User /></Link>
+        <Link href={'/dashboard'}><User /></Link>
       </div>
       {/* <div className="w-12 h-12 bg-gray-700 rounded-full"></div> */}
     </div>

@@ -31,7 +31,8 @@ export async function POST(req: NextRequest) {
 export async function DELETE(req: NextRequest) {
   try {
     const ids = await req.json();
-   
+    console.log(ids);
+    
     for (let i = data.length - 1; i >= 0; i--) {
       if (ids.includes(data[i].id)) {
         console.log('kell');     

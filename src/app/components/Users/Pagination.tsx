@@ -9,7 +9,7 @@ interface PaginationControlProps {
 
 export const PaginationControl: React.FC<PaginationControlProps> = ({ table }) => {
       return (
-            <div className="flex items-center gap-2 mt-4 justify-end">
+            <div className="flex items-center gap-2 mt-4 justify-end push-right">
                   <button
                         className="border rounded p-1"
                         onClick={() => table.firstPage()}
