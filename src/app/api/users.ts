@@ -1,5 +1,6 @@
-[
+export const data = [
   {
+    "id": 1,
     "first_name": "John",
     "last_name": "Doe",
     "email": "john.doe@example.com",
@@ -8,6 +9,7 @@
     "age": 25
   },
   {
+    "id": 2,
     "first_name": "Jane",
     "last_name": "Doe",
     "email": "jane.doe@example.com",
@@ -16,6 +18,7 @@
     "age": 30
   },
   {
+    "id": 3,
     "first_name": "Alice",
     "last_name": "Smith",
     "email": "alice.smith@example.com",
@@ -24,6 +27,7 @@
     "age": 28
   },
   {
+    "id": 4,
     "first_name": "Bob",
     "last_name": "Johnson",
     "email": "bob.johnson@example.com",
@@ -32,6 +36,7 @@
     "age": 35
   },
   {
+    "id": 5,
     "first_name": "Charlie",
     "last_name": "Brown",
     "email": "charlie.brown@example.com",
@@ -40,6 +45,7 @@
     "age": 22
   },
   {
+    "id": 6,
     "first_name": "David",
     "last_name": "Lee",
     "email": "david.lee@example.com",
@@ -48,6 +54,7 @@
     "age": 40
   },
   {
+    "id": 7,
     "first_name": "Emily",
     "last_name": "Davis",
     "email": "emily.davis@example.com",
@@ -56,6 +63,7 @@
     "age": 29
   },
   {
+    "id": 8,
     "first_name": "Frank",
     "last_name": "Miller",
     "email": "frank.miller@example.com",
@@ -64,6 +72,7 @@
     "age": 38
   },
   {
+    "id": 9,
     "first_name": "George",
     "last_name": "Wilson",
     "email": "george.wilson@example.com",
@@ -72,6 +81,7 @@
     "age": 27
   },
   {
+    "id": 10,
     "first_name": "Hannah",
     "last_name": "Taylor",
     "email": "hannah.taylor@example.com",
@@ -80,6 +90,7 @@
     "age": 32
   },
   {
+    "id": 11,
     "first_name": "Ivan",
     "last_name": "Hall",
     "email": "ivan.hall@example.com",
@@ -88,6 +99,7 @@
     "age": 45
   },
   {
+    "id": 12,
     "first_name": "Julia",
     "last_name": "Martin",
     "email": "julia.martin@example.com",
@@ -96,4 +108,3 @@
     "age": 26
   }
 ]
-

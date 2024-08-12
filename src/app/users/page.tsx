@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { Table } from 'rsuite';
-import UserTable from '../components/UserTable';
+
+import UserTable from '../components/UserTable/UserTable';
 const baseUrl = process.env.NEXT_URL
 
 export default async function UsersPage() {
