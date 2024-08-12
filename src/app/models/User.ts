@@ -3,6 +3,8 @@ export type User = {
       last_name: string;
       email: string;
       alternate_email: string;
-      age: number;
+      age: number | null;
+      password:string;
       id: string;
+      selected?:boolean
 };

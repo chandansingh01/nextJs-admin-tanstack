@@ -2,9 +2,9 @@
 
 import FormInput from "@/app/components/Form/FormInput";
 import {
-      useAddUserData,
-      useFetchUserDetails,
-      useUpdateUserData,
+    useAddUserData,
+    useFetchUserDetails,
+    useUpdateUserData,
 } from "@/app/hooks/UseUserData";
 import { useFormik } from "formik";
 import { useRouter } from "next/navigation";
@@ -12,9 +12,9 @@ import { useEffect } from "react";
 import { Button, Loader, Panel } from "rsuite";
 import * as Yup from "yup";
 
-type Props = { params: { userId: string } };
+type Props = { params: { userId: string }, onSucess:Function };
 
-// Validation schema using Yup
+// Validation schema usjiking Yup
 const validationSchema = Yup.object({
   first_name: Yup.string().required("First name is required"),
   last_name: Yup.string().required("Last name is required"),
@@ -30,7 +30,7 @@ const validationSchema = Yup.object({
     .min(18, "You must be at least 18 years old"),
 });
 
-const AddUserForm = ({ params }: Props) => {
+const AddUserForm = ({ params,onSucess }: Props) => {
   const { mutate: addUser } = useAddUserData();
   const { mutate: updateUser } = useUpdateUserData();
   const router = useRouter();
@@ -39,7 +39,9 @@ const AddUserForm = ({ params }: Props) => {
 
   let user: any;
   let isLoading;
-  if (params.userId) {
+  if (params.userId!=="null") {
+    console.log(params);
+    
     const response = useFetchUserDetails(params.userId);
     user = response.data;
     isLoading = response.isLoading;
@@ -57,13 +59,14 @@ const AddUserForm = ({ params }: Props) => {
     validationSchema,
     onSubmit: async (values, { setSubmitting }) => {
       try {
-        let response;
-        if (params.userId) {
-          updateUser({...values,id:params.userId});
+        console.log(params);
+        
+        if (params.userId=="null"||!params.userId) {
+            await addUser(values);
         } else {
-          addUser(values);
+            await updateUser({...values,id:params.userId});
         }
-        router.push("/users");
+        onSucess()
         
       } catch (error) {
         console.error("Error adding user:", error);

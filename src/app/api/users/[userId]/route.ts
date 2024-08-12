@@ -29,14 +29,14 @@ export async function PATCH(
 ) {
       const userData = await req.json();
       let user = data.findIndex((user) => user.id === parseInt(params.userId));
-      console.log(user);
-
-      if (!user) {
+      
+      if (user<0) {
             return Response.json({ error: 'User not found' }, { status: 404 });
       }
 
       data[user] = {
-            ...userData
+            ...userData,
+            age:parseInt(userData.age)
       }
       console.log(data);
 
