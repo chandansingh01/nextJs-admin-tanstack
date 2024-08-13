@@ -1,4 +1,4 @@
-# Pokegenesis
+# NextJS Tanstack starter
 
 ## Overview
 
